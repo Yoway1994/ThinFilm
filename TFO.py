@@ -122,8 +122,7 @@ def identity_matrix(wl):
     i = pd.DataFrame({'e1':np.ones(m), 'e2':np.zeros(m), 'e3':np.zeros(m), 'e4':np.ones(m)})
     i_matrix = np.reshape(i.values.reshape(1,-1), (m, 2, 2))
     return i_matrix
-
-
+    
 material = {
     'TiO2':{'A':5.913, 'B':0.2441, 'C':0.0803, 'type':'TiO2'},
     'SiO2':{'A':0.6961663,'B':0.0684043,'C':0.4079426,'D':0.1162414,'E':0.8974794,'F':9.896161, 'type':'SiO2'},
