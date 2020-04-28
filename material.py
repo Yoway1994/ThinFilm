@@ -1,6 +1,5 @@
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
 from os import path
 from scipy.interpolate import interp1d
 from scipy.optimize import basinhopping, minimize
@@ -32,11 +31,17 @@ class Material:
 
     def nvalues(self, wl):
         f = interp1d(self.wl, self.n, kind = 'cubic')
-        return f(wl)
-    
+        try:
+            return f(wl)
+        except:
+            return f(wl/1000)
+        
     def kvalues(self, wl):
         f = interp1d(self.wl_k, self.k, kind = 'cubic')
-        return f(wl)
+        try:
+            return f(wl)
+        except:
+            return f(wl/1000)
 
     def nk(self, wl):
         return self.nvalues(wl) - 1j*self.kvalues(wl)
@@ -72,6 +77,15 @@ def sellmeier_fitting(target_w, target_n, init = np.zeros(7), save = False, name
     if save: save_material(res.x, name)
     return res.x
 
+### material_book ###
+global m_path
+m_path = 'material.csv'
+
+def open_material_book():
+    file = pd.read_csv(m_path, index_col = 0)
+    for i in sorted(file.columns.values):
+        print(i)
+    
 def save_material(m_data, m_name, ext):
     suffix = ['_SE', '_w', '_n', '_wk', '_k']
     if ext in suffix:
@@ -80,31 +94,39 @@ def save_material(m_data, m_name, ext):
         print('use {} as suffix'.format(suffix))
 
 def _save(m_data, m_name, ext):
-	m_path = 'material.csv'
-	if path.exists(m_path):
-		file = pd.read_csv(m_path, index_col=0)
-		data = pd.DataFrame({m_name+ext:m_data})
-		new_file = pd.concat([file, data], axis = 1)
-		new_file.to_csv(m_path)
-	else:
-		with open(m_path, 'w+'):
-			pd.DataFrame({}).to_csv(m_path)
-		print('new_material_book')
+    name = m_name + ext
+    if path.exists(m_path):
+        file = pd.read_csv(m_path, index_col=0)
+        if name in file.columns:
+            file[name] = pd.Series(m_data)
+        else:
+            data = pd.DataFrame({name:m_data})
+            new_file = pd.concat([file, data], axis = 1)
+        new_file.to_csv(m_path)
+    else:
+        new_material_book(m_path)
+
+def new_material_book():
+    with open(m_path, 'w+'):
+        pd.DataFrame({}).to_csv(m_path)
+    print('new_material_book')
 
 def open_material(m_name, object_kind = None):
-    m_path = 'material.csv'
-    material = pd.read_csv(m_path, index_col=0)
+    m_file = pd.read_csv(m_path, index_col=0)
     if object_kind == 'Material':
-        m = Material(material[m_name+'_w'], material[m_name+'_n'])
+        m = Material(nan_remover(m_file[m_name+'_w']), nan_remover(m_file[m_name+'_n']))
     elif object_kind == 'Sellmeier':
-        m = Sellmeier(material[m_name+'_SE'])
+        m = Sellmeier(nan_remover(m_file[m_name+'_SE']))
     else:
         print('material database not founded')
     try:
-        m.k = material[m_name+'_k'].values
-        m.wl_k = material[m_name+'_wk'].values
+        m.wl_k = nan_remover(m_file[m_name+'_wk'].values)
+        m.k = nan_remover(m_file[m_name+'_k'].values)
     except:
-        m.k = material[m_name+'_k'].values
-        m.wl_k = material[m_name+'_w'].values
+        m.wl_k = nan_remover(m_file[m_name+'_w'].values)
+        m.k = nan_remover(m_file[m_name+'_k'].values)
     finally:
         return m
+
+def nan_remover(v):
+    return [x for x in v if str(x) != 'nan']
