@@ -1,2 +1,2 @@
-,air,OC_LENS,OC_HRI_LENS
-0,Non_Dispersion,Material,Material
+,air,OC_LENS,OC_HRI_LENS,SiN_INFO,ITO_INFO,SiN_LENS,ITO_LENS,SiO2_LENS
+0,Non_Dispersion,Material,Material,Material,Material,Sellmeier,Sellmeier,Sellmeier
