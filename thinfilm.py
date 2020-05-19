@@ -1,10 +1,11 @@
 import numpy as np
 import pandas as pd
+import copy
 from numpy import pi, sin, cos, arcsin, dot
 
 class Design:
     def __init__(self, material, thickness):
-        layer = list(zip(material, thickness))
+        layer = list(map(list, zip(material, thickness)))
         self.ambient = layer[0][0]
         self.substrate = layer[-1][0]
         self.middle = layer[1:-1]
@@ -112,4 +113,3 @@ def bc(eq, ns, wl):
     YY = [dot(eq[i], ita_s[i]) for i in range(m)]
     bc = pd.DataFrame(np.reshape(YY, (m,2)), columns = ['B','C'])
     return bc
-

@@ -23,10 +23,10 @@ class Non_Dispersion:
         return n - 1j*k
 
 class Material:
-    def __init__(self, wl, n, k = None, wl_k = None):
+    def __init__(self, wl, n, k = 0, wl_k = None):
         self.wl = wl
         self.n = n
-        self.k = np.zeros(np.size(wl))
+        self.k = k*np.ones(np.size(wl))
         self.wl_k = wl
 
     def nvalues(self, wl):
