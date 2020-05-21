@@ -113,3 +113,16 @@ def bc(eq, ns, wl):
     YY = [dot(eq[i], ita_s[i]) for i in range(m)]
     bc = pd.DataFrame(np.reshape(YY, (m,2)), columns = ['B','C'])
     return bc
+
+def margin(model, tol, wl):
+    margin_test = copy.deepcopy(model)
+    layer_margin = []
+    for i, layer in enumerate(margin_test.middle):
+        init_d = layer[-1]
+        margin = []
+        for j in np.linspace(-tol, tol, 20*tol+1):
+            margin_test.middle[i][-1] = init_d+j
+            margin.append(np.mean(margin_test.reflectance(wl)))
+        layer_margin.append([max(margin), min(margin)])
+        margin_test.middle[i][-1] = init_d
+    return layer_margin[::-1]
