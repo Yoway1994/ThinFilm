@@ -26,8 +26,8 @@ class Material:
     def __init__(self, wl, n, k = 0, wl_k = None):
         self.wl = wl
         self.n = n
-        self.k = k*np.ones(np.size(wl))
-        self.wl_k = wl
+        self.k = k*np.ones(np.size(wl_k))
+        self.wl_k = wl_k
 
     def nvalues(self, wl):
         f = interp1d(self.wl, self.n, kind = 'cubic')
@@ -68,6 +68,28 @@ class Sellmeier:
     def nk(self, wl):
         return self.nvalues(wl) - 1j*self.kvalues(wl)
 
+class Chromatic_Dispersion:
+    def __init__(self, c_n, c_k, c_w, k = 0, wl_k = 0):
+        self.cn = c_n
+        self.ck = c_k
+        self.cw = c_w
+        self.k = k
+        self.wl_k = wl_k
+    
+    def nvalues(self, wl):
+        n = self.ck*(wl-self.cw)/1000 + self.cn
+        return n
+    
+    def kvalues(self, wl):
+        try:
+            f = interp1d(self.wl_k, self.k, kind = 'cubic')
+            return f(wl)
+        except:
+            return self.k*np.ones(np.size(wl))
+    
+    def nk(self, wl):
+        return self.nvalues(wl) - 1j*self.kvalues(wl)
+    
 def sellmeier_fitting(target_w, target_n, init = np.zeros(7), save = False, name = None):
     wl = np.array(target_w)/1000
     hypo = lambda theta: theta[0] + theta[1]/(1-theta[2]/wl**2) + theta[3]/(1-theta[4]/wl**2) + theta[5]/(1-theta[6]/wl**2)

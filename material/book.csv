@@ -1,2 +1,2 @@
-,air,OC_LENS,OC_HRI_LENS,SiN_INFO,ITO_INFO,SiN_LENS,ITO_LENS,SiO2_LENS
-0,Non_Dispersion,Material,Material,Material,Material,Sellmeier,Sellmeier,Sellmeier
+,air,OC_LENS,OC_HRI_LENS,SiN_INFO,ITO_INFO,SiN_LENS,ITO_LENS,SiO2_LENS,SiO2_Nanya,Nb2O5_Nanya,ITO_Nanya,OC_Nanya,SiO2_NSNT,Corning1737_NSNT,ITO1_Nanya,ITO_LT_Nanya,sodalime_Nanya
+0,Non_Dispersion,Material,Material,Material,Material,Sellmeier,Sellmeier,Sellmeier,Material,Material,Material,Material,Sellmeier,Sellmeier,Material,Material,Material

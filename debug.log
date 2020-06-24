@@ -1,0 +1,264 @@
+[0607/205239.503:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0607/205239.503:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0608/091757.832:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0608/091757.846:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/002738.889:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/002738.905:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/003738.886:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/003738.886:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/003738.890:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/003738.890:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/004238.910:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/004238.910:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/005738.916:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/005738.918:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/011238.924:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/011238.924:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/012738.930:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/012738.933:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/014238.938:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/014238.938:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/015738.945:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/015738.948:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/021238.954:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/021238.954:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/091232.153:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/091232.167:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/092231.167:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/092231.167:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/092231.172:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/092231.172:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/092731.188:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/092731.188:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/094231.190:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/094231.193:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/095731.197:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/095731.197:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/101231.203:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/101231.206:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/102731.207:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/102731.207:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/104231.205:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/104231.210:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/105731.214:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/105731.214:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/111231.220:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/111231.222:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/112731.224:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/112731.224:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/114231.225:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/114231.227:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/115731.221:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/115731.221:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/121514.668:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/121514.671:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/123300.896:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/123300.896:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/124800.923:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/124800.926:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/130300.928:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/130300.928:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/131922.600:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/131922.602:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/133422.611:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/133422.611:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/134922.612:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/134922.614:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/140422.614:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/140422.614:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/141922.620:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/141922.623:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/143422.615:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/143422.615:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/144922.612:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/144922.615:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/150427.378:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/150427.380:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/151927.968:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/151927.971:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/153427.975:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/153427.975:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/154927.981:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/154927.984:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/160433.436:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/160433.438:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/161933.985:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/161933.990:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/163434.010:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/163434.011:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/164009.899:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/164009.916:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/165010.225:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/165010.225:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/165010.230:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/165010.230:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/165510.249:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/165510.249:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/171010.257:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/171010.260:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/172510.265:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/172510.265:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/174010.267:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/174010.271:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/175510.273:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/175510.273:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/181010.271:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/181010.275:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/182510.275:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/182510.276:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/184010.276:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/184010.280:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/185510.276:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/185510.276:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/191010.281:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/191010.285:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/192510.284:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/192510.284:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/194010.286:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/194010.290:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/195510.295:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/195510.295:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/201010.299:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/201010.303:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/202510.305:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/202510.305:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/204010.306:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/204010.310:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0609/205510.303:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0609/205510.303:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0610/132814.618:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0610/132814.633:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0610/133814.621:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0610/133814.621:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0610/133814.626:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0610/133814.626:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0610/134314.629:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0610/134314.629:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0610/135814.633:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0610/135814.638:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0610/141314.647:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0610/141314.648:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0610/142814.655:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0610/142814.657:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0610/144314.663:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0610/144314.663:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0610/145814.663:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0610/145814.668:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0610/151314.673:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0610/151314.673:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0610/152814.680:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0610/152814.684:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0610/154314.690:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0610/154314.690:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0610/155814.695:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0610/155814.699:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0610/161314.700:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0610/161314.700:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0610/162814.705:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0610/162814.709:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0610/164314.706:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0610/164314.706:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0610/165814.709:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0610/165814.713:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0610/171314.715:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0610/171314.719:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0610/172814.722:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0610/172814.722:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0610/174314.723:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0610/174314.727:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0610/175814.728:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0610/175814.728:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0610/181314.732:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0610/181314.737:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0610/182814.737:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0610/182814.737:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0611/002908.820:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0611/002908.851:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0611/103207.995:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0611/103208.012:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0611/104207.979:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0611/104207.979:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0611/104207.984:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0611/104207.984:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0611/104708.000:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0611/104708.003:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0611/110208.004:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0611/110208.004:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0611/111708.010:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0611/111708.014:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0611/113208.030:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0611/113208.030:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0611/114708.042:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0611/114708.044:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0611/120208.052:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0611/120208.052:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0611/121708.051:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0611/121708.055:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0611/123208.057:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0611/123208.057:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0611/124708.062:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0611/124708.066:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0611/131428.883:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0611/131428.883:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0611/132928.928:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0611/132928.932:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0611/134428.915:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0611/134428.915:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0611/135928.921:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0611/135928.925:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0611/141428.933:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0611/141428.933:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0611/142928.945:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0611/142928.950:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0611/144428.958:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0611/144428.958:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0611/145928.959:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0611/145928.963:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0611/151428.967:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0611/151428.967:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0611/152928.971:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0611/152928.975:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0611/154428.975:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0611/154428.975:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0611/155928.973:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0611/155928.976:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0611/161428.975:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0611/161428.975:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0611/162928.981:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0611/162928.985:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0611/164428.983:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0611/164428.987:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0611/170842.454:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0611/170842.454:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0611/172342.447:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0611/172342.451:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0611/173842.445:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0611/173842.445:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0611/175342.449:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0611/175342.453:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0611/180842.456:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0611/180842.456:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0611/182342.459:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0611/182342.464:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0611/183842.464:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0611/183842.464:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0611/185342.460:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0611/185342.464:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0611/190842.484:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0611/190842.484:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0611/192342.483:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0611/192342.487:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0611/193842.494:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0611/193842.495:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0611/195342.505:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0611/195342.510:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0611/200842.516:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0611/200842.516:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0611/202342.521:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0611/202342.526:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0611/203842.530:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0611/203842.530:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0611/205342.536:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0611/205342.539:ERROR:crash_report_database_win.cc(445)] failed to read records
+[0611/210009.925:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
+[0611/210009.925:ERROR:crash_report_database_win.cc(445)] failed to read records

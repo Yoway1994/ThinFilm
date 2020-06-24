@@ -123,6 +123,6 @@ def margin(model, tol, wl):
         for j in np.linspace(-tol, tol, 20*tol+1):
             margin_test.middle[i][-1] = init_d+j
             margin.append(np.mean(margin_test.reflectance(wl)))
-        layer_margin.append([max(margin), min(margin)])
+        layer_margin.append([max(margin), min(margin), max(margin)-min(margin)])
         margin_test.middle[i][-1] = init_d
     return layer_margin[::-1]
