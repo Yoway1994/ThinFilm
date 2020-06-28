@@ -81,7 +81,33 @@ class Design:
                 return self._reflectance(wl, angle, "avg")
         else:
             return self._reflectance(wl, angle, pl)
-
+    
+    def _reflec_trans(self, wl, angle, pl):
+        eq_y = self.eq_admittance(wl, angle, pl)
+        # transmittance part
+        t = (self.ambient.nk(wl)*eq_y["B"]+eq_y["C"]).values
+        T = 4*self.ambient.nk(wl)*np.real(self.substrate.nk(wl))/(t*t.conjugate()) 
+        # reflectance
+        Y = eq_y['C']/eq_y['B']
+        eq_Y = Y.values.reshape(np.size(wl), 1).flatten()
+        r = (self.ambient.nk(wl)-eq_Y)/(self.ambient.nk(wl)+eq_Y)
+        R = np.reshape(r*r.conjugate(), np.size(eq_Y))
+        ###
+        return np.real(R), T.real
+    
+    def reflec_trans(self, wl, angle = 0, pl = None):
+        if angle != 0:
+            angle = angle*pi/180
+            if pl == "S":
+                return self._reflec_trans(wl, angle, "S")
+            elif pl == "P":
+                return self._reflec_trans(wl, angle, "P")
+            else:
+                return self._reflec_trans(wl, angle, "avg")
+        else:
+            return self._reflec_trans(wl, angle, pl)
+    
+    
 def angular_dispersion(layer, wl, theta_0, pl, theta_n):
     if pl == "S":
             return layer[0].nk(wl)*cos(theta_n)/cos(theta_0)
@@ -126,3 +152,16 @@ def margin(model, tol, wl):
         layer_margin.append([max(margin), min(margin), max(margin)-min(margin)])
         margin_test.middle[i][-1] = init_d
     return layer_margin[::-1]
+
+def sec_reflc(model, wl, angle = 0):
+    RB = Design([model.substrate, model.ambient],[None, None]).reflectance(wl, angle)
+    
+    RaD_model = copy.deepcopy(model)
+    RaD_model.substrate = model.ambient
+    RaD_model.ambient = model.substrate
+    RaD_model.middle = model.middle[::-1]
+    RaD = RaD_model.reflectance(wl, angle)
+
+    RaU, Ta = model.reflec_trans(wl, angle)
+    R = (RaU + RB*(Ta**2-RaU*RaD))/(1-RaD*RB)
+    return(R)
