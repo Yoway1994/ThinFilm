@@ -34,6 +34,10 @@ class Design:
             eq_y = bc(eq_matrix, self.substrate.nk(wl)*cos(theta_s)/cos(angle), wl)
         elif pl == "P":
             eq_y = bc(eq_matrix, self.substrate.nk(wl)*cos(angle)/cos(theta_s), wl)
+        elif angle != 0 and pl == "avg":
+            eq_y = bc(
+                eq_matrix, self.substrate.nk(wl)*(cos(theta_s)/cos(angle)+cos(angle)/cos(theta_s))/2, wl
+            )
         else:
             eq_y = bc(eq_matrix, self.substrate.nk(wl), wl)
         return eq_y
@@ -153,15 +157,30 @@ def margin(model, tol, wl):
         margin_test.middle[i][-1] = init_d
     return layer_margin[::-1]
 
-def sec_reflc(model, wl, angle = 0):
-    RB = Design([model.substrate, model.ambient],[None, None]).reflectance(wl, angle)
+def sec_reflec(model, wl, angle = 0):
     
+    # copy
     RaD_model = copy.deepcopy(model)
     RaD_model.substrate = model.ambient
     RaD_model.ambient = model.substrate
     RaD_model.middle = model.middle[::-1]
-    RaD = RaD_model.reflectance(wl, angle)
+    ###
+    wl_c = np.mean(wl)
+    angle_s = arcsin(model.ambient.nvalues(wl_c)/model.substrate.nvalues(wl_c)*sin(angle))
+    RB = Design([model.substrate, model.ambient],[None, None]).reflectance(wl, angle_s)
+    RaD, TaD = RaD_model.reflec_trans(wl, angle_s)
+    RaU, TaU = model.reflec_trans(wl, angle)
+    R = (RaU + RB*(TaU*TaD-RaU*RaD))/(1-RaD*RB)
+    return R
 
-    RaU, Ta = model.reflec_trans(wl, angle)
-    R = (RaU + RB*(Ta**2-RaU*RaD))/(1-RaD*RB)
-    return(R)
+def sec_transmit(model, wl, angle = 0):
+    BG = Design([model.substrate, model.ambient],[None, None])
+    #
+    RaD_model = copy.deepcopy(model)
+    RaD_model.substrate = model.ambient
+    RaD_model.ambient = model.substrate
+    RaD_model.middle = model.middle[::-1]
+    #
+    RaD = RaD_model.reflectance(wl, angle)
+    RB, TB = BG.reflec_trans(wl, angle)
+    pass
