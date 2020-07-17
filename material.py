@@ -68,6 +68,72 @@ class Sellmeier:
     def nk(self, wl):
         return self.nvalues(wl) - 1j*self.kvalues(wl)
 
+class Sellmeier_Simple:
+    def __init__(self, ABC, k = 0, wl_k = 0):
+        self.theta = ABC
+        self.k = k
+        self.wl_k = wl_k
+
+    def nvalues(self, wl):
+        theta = self.theta
+        wl = wl/1000
+        n = theta[0] + theta[1]/(1-theta[2]/wl**2)
+        return n**.5
+
+    def kvalues(self, wl):
+        try:
+            f = interp1d(self.wl_k, self.k, kind = 'cubic')
+            return f(wl)
+        except:
+            return self.k*np.ones(np.size(wl))
+
+    def nk(self, wl):
+        return self.nvalues(wl) - 1j*self.kvalues(wl)
+
+class Cauchy:
+    def __init__(self, BC, k = 0, wl_k = 0):
+        self.theta = BC
+        self.k = k
+        self.wl_k = wl_k
+
+    def nvalues(self, wl):
+        theta = self.theta
+        wl = wl/1000
+        n = theta[0] + theta[1]/wl**2
+        return n
+
+    def kvalues(self, wl):
+        try:
+            f = interp1d(self.wl_k, self.k, kind = 'cubic')
+            return f(wl)
+        except:
+            return self.k*np.ones(np.size(wl))
+
+    def nk(self, wl):
+        return self.nvalues(wl) - 1j*self.kvalues(wl)
+
+class Curve_Dispersion:
+    def __init__(self, ABC, k = 0, wl_k = 0):
+        self.theta = ABC
+        self.k = k
+        self.wl_k = wl_k
+
+    def nvalues(self, wl):
+        theta = self.theta
+        wl = wl/1000
+        n = theta[0]*wl**2 + theta[1]*wl + theta[2]
+        return n
+
+    def kvalues(self, wl):
+        try:
+            f = interp1d(self.wl_k, self.k, kind = 'cubic')
+            return f(wl)
+        except:
+            return self.k*np.ones(np.size(wl))
+
+    def nk(self, wl):
+        return self.nvalues(wl) - 1j*self.kvalues(wl)  
+    
 class Chromatic_Dispersion:
     def __init__(self, c_n, c_k, c_w, k = 0, wl_k = 0):
         self.cn = c_n
