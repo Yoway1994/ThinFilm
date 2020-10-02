@@ -1,13 +1,4 @@
-﻿PRINT DATE :2020/4/9 下午 05:27:41,
-,
-SAMPLE :,
-RANGE :400nm ～ 780nm,
-T50% WL=,
-RANGE :400nm ～ 780nm,
-"MAX :92.46 , 627.6nm    MIN :87.75 , 402nm    AVERAGE :90.6",
-,
-,
-nm,SCAN
+﻿nm,SCAN
 400,87.94
 401,87.78
 402,87.92

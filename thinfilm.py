@@ -14,7 +14,7 @@ class Design:
         if angle != 0:
             theta_n = arcsin(self.ambient.nvalues(wl)*sin(angle)/layer[0].nvalues(wl))
             ita = angular_dispersion(layer, wl, angle, pl, theta_n)
-            delta = 2*pi*ita*layer[1]*cos(theta_n)/wl
+            delta = 2*pi*layer[0].nvalues(wl)*layer[1]*cos(theta_n)/wl
         else:
             ita = layer[0].nk(wl)
             delta = 2*pi*ita*layer[1]/wl
@@ -34,10 +34,6 @@ class Design:
             eq_y = bc(eq_matrix, self.substrate.nk(wl)*cos(theta_s)/cos(angle), wl)
         elif pl == "P":
             eq_y = bc(eq_matrix, self.substrate.nk(wl)*cos(angle)/cos(theta_s), wl)
-        elif angle != 0 and pl == "avg":
-            eq_y = bc(
-                eq_matrix, self.substrate.nk(wl)*(cos(theta_s)/cos(angle)+cos(angle)/cos(theta_s))/2, wl
-            )
         else:
             eq_y = bc(eq_matrix, self.substrate.nk(wl), wl)
         return eq_y
@@ -64,7 +60,7 @@ class Design:
             elif pl == "P":
                 return self._transmittance(wl, angle, "P")
             else:
-                return self._transmittance(wl, angle, "avg")
+                return (self._transmittance(wl, angle, "S")+self._transmittance(wl, angle, "P"))/2
         else:
             return self._transmittance(wl, angle, pl)
     
@@ -82,7 +78,7 @@ class Design:
             elif pl == "P":
                 return self._reflectance(wl, angle, "P")
             else:
-                return self._reflectance(wl, angle, "avg")
+                return (self._reflectance(wl, angle, "S")+self._reflectance(wl, angle, "P"))/2
         else:
             return self._reflectance(wl, angle, pl)
     
@@ -97,7 +93,7 @@ class Design:
         r = (self.ambient.nk(wl)-eq_Y)/(self.ambient.nk(wl)+eq_Y)
         R = np.reshape(r*r.conjugate(), np.size(eq_Y))
         ###
-        return np.real(R), T.real
+        return [np.real(R), T.real]
     
     def reflec_trans(self, wl, angle = 0, pl = None):
         if angle != 0:
@@ -107,19 +103,18 @@ class Design:
             elif pl == "P":
                 return self._reflec_trans(wl, angle, "P")
             else:
-                return self._reflec_trans(wl, angle, "avg")
+                S = self._reflec_trans(wl, angle, "S")
+                P = self._reflec_trans(wl, angle, "P")
+                return (S[0]+P[0])/2, (S[1]+P[1])/2
         else:
             return self._reflec_trans(wl, angle, pl)
-    
-    
+        
 def angular_dispersion(layer, wl, theta_0, pl, theta_n):
     if pl == "S":
             return layer[0].nk(wl)*cos(theta_n)/cos(theta_0)
     elif pl == "P":
             return layer[0].nk(wl)*cos(theta_0)/cos(theta_n)
-    elif pl == 'avg':
-            return layer[0].nk(wl)*(cos(theta_0)/cos(theta_n)+cos(theta_n)/cos(theta_0))/2
-            
+
 def identity_matrix(wl):
     m = np.size(wl)
     i = pd.DataFrame({'e1':np.ones(m), 'e2':np.zeros(m), 'e3':np.zeros(m), 'e4':np.ones(m)})
@@ -129,7 +124,8 @@ def identity_matrix(wl):
 def matrix_element(ita, delta):
     e = pd.DataFrame(
         {'e1':cos(delta), 'e2':1j/ita*sin(delta), 
-         'e3':1j*ita*sin(delta), 'e4':cos(delta)})
+         'e3':1j*ita*sin(delta), 'e4':cos(delta)}
+    )
     return e
 
 def matrix_dot(layer_up, layer_bot): 
@@ -157,30 +153,34 @@ def margin(model, tol, wl):
         margin_test.middle[i][-1] = init_d
     return layer_margin[::-1]
 
-def sec_reflec(model, wl, angle = 0):
-    
+def sec_reflec(model, wl, angle = 0, pl = None):
     # copy
-    RaD_model = copy.deepcopy(model)
-    RaD_model.substrate = model.ambient
-    RaD_model.ambient = model.substrate
-    RaD_model.middle = model.middle[::-1]
+    D_model = copy.deepcopy(model)
+    D_model.substrate = model.ambient
+    D_model.ambient = model.substrate
+    D_model.middle = model.middle[::-1]
     ###
-    wl_c = np.mean(wl)
-    angle_s = arcsin(model.ambient.nvalues(wl_c)/model.substrate.nvalues(wl_c)*sin(angle))
-    RB = Design([model.substrate, model.ambient],[None, None]).reflectance(wl, angle_s)
-    RaD, TaD = RaD_model.reflec_trans(wl, angle_s)
-    RaU, TaU = model.reflec_trans(wl, angle)
-    R = (RaU + RB*(TaU*TaD-RaU*RaD))/(1-RaD*RB)
-    return R
+    #angle_s = arcsin(model.ambient.nvalues(w)/model.substrate.nvalues(w)*sin(angle*np.pi/180))
+    RB = Design([model.substrate, model.ambient],[None, None]).reflectance(wl)
+    RaD, TaD = D_model.reflec_trans(wl)
+    RaU, TaU = model.reflec_trans(wl)
+    R_w = (RaU + RB*(TaU*TaD-RaU*RaD))/(1-RaD*RB)
+    return R_w
 
-def sec_transmit(model, wl, angle = 0):
+def sec_transmit(model, wl, angle = 0, pl = None):
     BG = Design([model.substrate, model.ambient],[None, None])
     #
-    RaD_model = copy.deepcopy(model)
-    RaD_model.substrate = model.ambient
-    RaD_model.ambient = model.substrate
-    RaD_model.middle = model.middle[::-1]
+    D_model = copy.deepcopy(model)
+    D_model.substrate = model.ambient
+    D_model.ambient = model.substrate
+    D_model.middle = model.middle[::-1]
     #
-    RaD = RaD_model.reflectance(wl, angle)
-    RB, TB = BG.reflec_trans(wl, angle)
-    pass
+    #angle_s = arcsin(model.ambient.nvalues(w)/model.substrate.nvalues(w)*sin(angle*np.pi/180))
+    RaD = D_model.reflectance(wl)
+    RB, TB = BG.reflec_trans(wl)
+    TaU = model.transmittance(wl)
+    T = (TaU*TB)/(1-RaD*RB)
+    return T
+
+def RMSE(hypo, target):
+    return (sum((hypo-target)**2)/np.size(target))**.5
