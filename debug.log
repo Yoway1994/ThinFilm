@@ -262,3 +262,5 @@
 [0611/205342.539:ERROR:crash_report_database_win.cc(445)] failed to read records
 [0611/210009.925:ERROR:file_io.cc(89)] ReadExactly: expected 728, observed 0
 [0611/210009.925:ERROR:crash_report_database_win.cc(445)] failed to read records
+[1027/103636.917:ERROR:directory_reader_win.cc(43)] FindFirstFile: 系統找不到指定的路徑。 (0x3)
+[1029/094154.185:ERROR:directory_reader_win.cc(43)] FindFirstFile: 系統找不到指定的路徑。 (0x3)
